@@ -103,7 +103,6 @@ import * as oatu from '@/api/permission.js'
 import * as cookie from '@/api/getcookie'
 import { mapMutations, mapGetters } from 'vuex'
 // import { Toast } from 'vant'
-import resetpwd from '@/components/resetpwd/resetpwd'
 export default {
   name: 'login',
   data () {

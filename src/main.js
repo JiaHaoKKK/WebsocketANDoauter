@@ -8,24 +8,6 @@ import 'iview/dist/styles/iview.css'
 import * as cookie from '@/api/getcookie'
 Vue.config.productionTip = false
 Vue.use(iView)
-// if (cookie.getcookie()) {
-//   console.log(store.state.userName + 's')
-//   store.commit('SET_USER', {
-//     userName: cookie.getcookie().username
-//   })
-//   console.log(store.state.userName + 'ssss')
-//   store.commit('SET_ROLE', {
-//     role: cookie.getcookie().role
-//   })
-//   store.commit('SET_PWD', {
-//     password: cookie.getcookie().password
-//   })
-// }
-// if (cookie.gettoken()) {
-//   store.commit('SET_TOKEN', {
-//     role: cookie.gettoken()
-//   })
-// }
 
 router.beforeEach((to, from, next) => {
   if (to.meta.requireAuth) {

@@ -25,12 +25,6 @@
             <i-Input type="password"
                      v-model="formCustom.passwdCheck"></i-Input>
           </FormItem>
-          <!-- <FormItem>
-            <Button type="primary"
-                    @click="handleSubmit('formCustom')">Submit</Button>
-            <Button @click="handleReset('formCustom')"
-                    style="margin-left: 8px">Reset</Button>
-          </FormItem> -->
         </Form>
       </div>
 
