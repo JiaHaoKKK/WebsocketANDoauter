@@ -1,7 +1,7 @@
 <template>
   <div class="homepage-hero-module">
     <div class="video-container">
-      <div :style="fixStyle"
+      <!-- <div :style="fixStyle"
            class="filter"></div>
       <video :style="fixStyle"
              autoplay
@@ -20,7 +20,7 @@
         <img :style="fixStyle"
              src="./src/Snapshots/Lonely-Blue.jpg"
              alt="">
-      </div>
+      </div> -->
     </div>
     <div class='login'
          v-if='!resetpwdflag'>
@@ -82,6 +82,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background: #548692;
 }
 
 .video-container .poster img,
@@ -309,7 +310,7 @@ export default {
     }
   },
   components: {
-    resetpwd
+    // resetpwd
   }
 }
 </script>
