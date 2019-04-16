@@ -1,16 +1,21 @@
-export function GMTToStr (time) {
-  let date = new Date(time)
-  let Str =
-    date.getFullYear() +
-    '-' +
-    (date.getMonth() + 1) +
-    '-' +
-    date.getDate() +
-    ' ' +
-    date.getHours() +
+export function GMTToStr (data, time) {
+  let date = new Date(data)
+  let arr = []
+  arr = time.split(':')
+  let day = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()
+  let Month =
+    date.getMonth() + 1 > 9 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1)
+  let str =
+    arr[0] +
     ':' +
-    date.getMinutes() +
+    arr[1] +
     ':' +
-    date.getSeconds()
-  return Str
+    arr[2] +
+    ':' +
+    day +
+    ':' +
+    Month +
+    ':' +
+    date.getFullYear()
+  return str
 }
