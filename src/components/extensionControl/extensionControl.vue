@@ -313,9 +313,7 @@ export default {
       this.handleReset('formValidate')
     },
     handleSubmit (name) {
-      console.log(this.formValidate)
-      console.log(this.formValidate.threshold)
-      console.log(typeof this.formValidate.threshold)
+      console.log(this.mapformValidate())
       this.$refs[name].validate((valid) => {
         if (valid) {
           setTimeout(() => {
@@ -332,6 +330,32 @@ export default {
     },
     handleReset (name) {
       this.$refs[name].resetFields()
+    },
+    mapformValidate () {
+      // 返回分机控制字里的状态码
+      let obj = {
+        dog: '',
+        state: '',
+        open: '',
+        transformModal: '',
+        dealmodal: '',
+        calibrationModal: '',
+        selectcalibration: '',
+        Combinerchoice: '' // 分机控制字段结束
+      }
+      let str = ''
+      let result = {}
+      for (let items in this.formValidate) {
+        result[items] = this.formValidate[items]
+      }
+      for (let items in obj) {
+        if (this.formValidate[items]) {
+          str += this.formValidate[items]
+          delete result[items]
+        }
+      }
+      result.extensionControlCharacter = str
+      return result
     }
   },
   components: {

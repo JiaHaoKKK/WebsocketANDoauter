@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <div class="wrapper">
-      <form-content></form-content>
+      <!-- <form-content></form-content> -->
+      <system-calibration ref="sysca"></system-calibration>
+      <!-- <extension-control ref="exten"></extension-control>
+      <system-command ref="sysco"></system-command> -->
     </div>
     <div class="LogOut">
       <span class="userlist"
@@ -32,7 +35,9 @@ import { mapState, mapMutations } from 'vuex'
 import * as cookie from '@/api/getcookie'
 import tableInformation from 'components/tableInformation/tableInformation'
 import changePassword from 'components/changePassword/changePassword'
-import formContent from 'components/formContent/formContent'
+import systemCalibration from 'components/systemCalibration/systemCalibration'
+import extensionControl from 'components/extensionControl/extensionControl'
+import systemCommand from 'components/systemCommand/systemCommand'
 export default {
   data () {
     return {
@@ -146,7 +151,9 @@ export default {
   components: {
     tableInformation,
     changePassword,
-    formContent
+    systemCalibration,
+    extensionControl,
+    systemCommand
   }
 }
 </script>
@@ -157,9 +164,10 @@ export default {
   height: 100vh;
   overflow: hidden;
   color: black;
+  background: #b3c2c9;
   /* background: url(../../assets/bg.jpg);
   background-size: 100% 100%; */
-  background-image: linear-gradient(135deg, #f6d4d8, #b3c2db);
+  /* background-image: linear-gradient(135deg, #f6d4d8, #b3c2db); */
 }
 .wrapper {
   position: absolute;

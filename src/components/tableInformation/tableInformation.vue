@@ -58,10 +58,6 @@ export default {
           title: '用户名',
           key: 'username'
         },
-        // {
-        //   title: 'Password',
-        //   key: 'password'
-        // },
         {
           title: '操作',
           slot: 'action',

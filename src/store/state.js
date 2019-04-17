@@ -1,6 +1,6 @@
 const state = {
   userName: '',
-  token: '',
+  token: '2',
   password: '',
   role: 0
 }

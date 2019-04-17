@@ -56,7 +56,7 @@ import { GMTToStr } from '@/api/transformDate'
 export default {
   data () {
     return {
-      modal1: false,
+      modal1: true,
       loading: true,
       formValidate: {
         date: '',
@@ -81,6 +81,8 @@ export default {
       })
     },
     ok () {
+      let dataTime = GMTToStr(this.formValidate.date, this.formValidate.time)
+      console.log(dataTime)
       this.handleSubmit('formValidate')
     },
     cancel () {
